@@ -1,0 +1,72 @@
+name: ✨ Feature Request
+description: Suggest a new idea, style or enhancement for the Wallpaper Changer mod.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Share your idea! 💡
+        Wallpaper Changer is a wallpaper selector opened with a hotkey. It has three styles
+        (Card carousel, Folder strip and Showcase), collections from your folders and keyboard,
+        wheel and drag navigation. Please check the README before asking for something that exists.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the mod does the idea touch?
+      options:
+        - "A new style"
+        - "Changing the wallpaper (transitions, per monitor, fit mode)"
+        - "Collections and scanning"
+        - "Keyboard, mouse and hotkey"
+        - "Settings"
+        - "Performance or responsiveness"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-link
+    attributes:
+      label: Is your feature request related to a problem?
+      description: A clear description of the problem or limitation (e.g. "I'm always frustrated when...").
+      placeholder: |
+        e.g. I have two monitors and want a different wallpaper on each.
+    validations:
+      required: false
+
+  - type: textarea
+    id: solution-description
+    attributes:
+      label: Describe the desired solution
+      description: What should happen, and how should it look or behave?
+      placeholder: |
+        e.g. A setting to apply the wallpaper only to the monitor under the mouse.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Describe alternatives you've considered
+      description: Any workaround, external tool or different approach you already tried.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context or visual examples
+      description: Mockups, screenshots or links are welcome.
+      placeholder: You can drag and drop your images here.
+
+  - type: checkboxes
+    id: submit-pr
+    attributes:
+      label: Are you willing to submit a PR?
+      description: >-
+        (Optional) We encourage you to open a [Pull Request](../../pulls) if you
+        want to code this feature yourself.
+      options:
+        - label: Yes, I'd like to help by submitting a PR!

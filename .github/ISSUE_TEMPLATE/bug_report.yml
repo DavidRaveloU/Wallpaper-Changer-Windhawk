@@ -1,0 +1,114 @@
+name: 🐛 Report a Bug
+description: Report a bug or unexpected behavior in the Wallpaper Changer mod.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thanks for reporting the issue! 🚀
+        Wallpaper Changer opens a wallpaper selector with a hotkey. Please fill out this form so the
+        problem can be reproduced quickly.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Preliminary review
+      description: Please make sure the problem has not been reported already.
+      options:
+        - label: I have searched the open/closed issues and nobody has reported this same problem.
+          required: true
+        - label: I read the README, including the Keys and Settings sections.
+          required: true
+
+  - type: dropdown
+    id: windows-version
+    attributes:
+      label: Windows version
+      description: The operating system the mod runs on.
+      options:
+        - "Windows 11 (24H2 or newer)"
+        - "Windows 11 (23H2 / 22H2)"
+        - "Windows 11 (21H2 or older)"
+        - "Windows 10"
+        - "Other / Insider build"
+    validations:
+      required: true
+
+  - type: input
+    id: versions
+    attributes:
+      label: Windhawk and mod version
+      description: Which Windhawk version is installed and which mod version is loaded?
+      placeholder: "e.g. Windhawk v1.6.1 - Wallpaper Changer v1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: style
+    attributes:
+      label: Style
+      description: The value of the Style setting when the problem happened.
+      options:
+        - "Card carousel"
+        - "Folder strip"
+        - "Showcase"
+        - "Not sure"
+    validations:
+      required: true
+
+  - type: input
+    id: folder
+    attributes:
+      label: Wallpapers folder (optional)
+      description: Where the wallpapers are and roughly how many, if the bug looks related to scanning or previews.
+      placeholder: "e.g. a local folder with 6 subfolders and 800 images, or a network share"
+
+  - type: input
+    id: display
+    attributes:
+      label: Display setup (optional)
+      description: Scaling percentage and number of monitors, if the bug looks like a size, DPI or multi-monitor problem.
+      placeholder: "e.g. 150% scaling on two 1440p monitors"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug description
+      description: What exactly happens, and what should happen instead?
+      placeholder: |
+        e.g. Pressing the hotkey opens the selector, but it only shows "No wallpapers found".
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The exact steps that trigger the failure.
+      placeholder: |
+        1. Enable the mod with the Showcase style.
+        2. Press Ctrl+Alt+P.
+        3. See the problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and evidence
+      description: >-
+        The mod logs to Windhawk. Open the mod in Windhawk, enable the log output and attach what
+        it prints when the problem happens, or a screenshot.
+      placeholder: Paste the log or drag the screenshots here.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: submit-pr
+    attributes:
+      label: Are you willing to submit a PR?
+      description: >-
+        (Optional) We encourage you to open a [Pull Request](../../pulls) if you
+        have a fix or an improvement in mind.
+      options:
+        - label: Yes, I'd like to help by submitting a PR!

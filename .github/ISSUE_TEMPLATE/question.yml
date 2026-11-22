@@ -1,0 +1,58 @@
+name: ❓ Question / Support Request
+description: Ask about using or configuring the Wallpaper Changer mod.
+labels: [question]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Need help? 🙋
+        Please check the [README](../../blob/main/README.md) first, especially the
+        **Keys** and **Settings** sections. If your question is still open, describe it below.
+
+  - type: textarea
+    id: question-details
+    attributes:
+      label: What is your question?
+      description: Explain what you are trying to do and what is blocking you.
+      placeholder: |
+        e.g. How do I make the selector open with a different hotkey?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: question-category
+    attributes:
+      label: Category
+      description: Which area does your question belong to?
+      options:
+        - "General usage (hotkey, keys, mouse)"
+        - "Settings (folder, style, hotkey)"
+        - "Collections and scanning"
+        - "Installing in Windhawk"
+        - "Other"
+    validations:
+      required: true
+
+  - type: input
+    id: versions
+    attributes:
+      label: Windhawk and mod version
+      description: Which versions are you running? Leave it empty if the question is not about a specific build.
+      placeholder: "e.g. Windhawk v1.6.1 - Wallpaper Changer v1.0.0"
+
+  - type: dropdown
+    id: windows-version
+    attributes:
+      label: Windows version (optional)
+      options:
+        - "Windows 11 (24H2 or newer)"
+        - "Windows 11 (23H2 / 22H2)"
+        - "Windows 11 (21H2 or older)"
+        - "Windows 10"
+        - "Other / Insider build"
+
+  - type: textarea
+    id: background-info
+    attributes:
+      label: Context or attempted solutions
+      description: Steps you already tried, error messages, or documentation you reviewed.

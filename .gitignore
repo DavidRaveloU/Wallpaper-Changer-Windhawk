@@ -1,0 +1,32 @@
+*.exe
+*.dll
+*.pdb
+*.obj
+/build/
+/.vs/
+
+# Local development only, never published.
+/.atl/
+/ejemplos/
+/odd/
+/build-check.ps1
+/windhawk_mock.h
+/test/
+/spotlight-launcher.wh.cpp
+
+# Agent tooling, skills and the plans and specs they generate.
+/.superpowers/
+/.claude/
+/.agents/
+/.cursor/
+/docs/
+/CLAUDE.md
+/AGENTS.md
+
+# Somebody else's mod kept here only to read it, scratch notes and captured logs.
+/mod.txt
+/logs.txt
+/New Documento de texto.txt
+*.log
+*.tmp
+*.stackdump
