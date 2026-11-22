@@ -28,6 +28,15 @@ selector over your desktop, you browse with the keyboard, the mouse wheel or by 
 wallpaper changes only when you confirm. It goes to every monitor, or only to the one the selector
 opened on if you prefer (see [Several monitors](#several-monitors)).
 
+## How it differs from Simple Wallpaper Switcher
+
+[Simple Wallpaper Switcher](https://windhawk.net/mods/simple-wallpaper-switcher) is a compact utility
+picker: a paged thumbnail grid with folder navigation and search, themes and a tray icon. This mod is
+a gallery instead. You browse one wallpaper at a time, large, with the keyboard or by dragging, and
+the selector and the effect are one motion: the card you pick grows from where it was on screen until
+it is the wallpaper, and the overlay stays until the desktop really shows it. If you want search,
+themes or a tray icon, Simple Wallpaper Switcher is the better fit.
+
 ## Styles
 
 Pick the look with the **Style** setting. It takes effect the next time the selector opens.
@@ -103,7 +112,7 @@ log says so.
 
 | Setting | Default | Notes |
 | --- | --- | --- |
-| Wallpapers folder | your Pictures folder | Every subfolder becomes a collection. Quotes around the path and `%VARIABLES%` are accepted. |
+| Wallpapers folder | your Pictures folder | Every subfolder becomes a collection. Quotes around the path and `%VARIABLES%` are accepted. Empty scans the whole Pictures folder (up to 5000 images), so a folder just for wallpapers is better. |
 | Style | Card carousel | Card carousel, Folder strip or Showcase. |
 | Transition | Card expand | Card expand, Blinds, Pixelate, Tile wave, Random or None. |
 | Only change the current monitor | off | Off: every monitor changes and plays the effect. On: only the monitor the selector opened on. |
@@ -115,8 +124,11 @@ log says so.
 - Supported images: JPG, JPEG, PNG, BMP and WebP (WebP needs the Windows WebP codec). The folder is
   scanned each time the selector opens, up to 5000 images.
 - Applying a wallpaper changes the Windows desktop wallpaper setting, so Windows keeps it after the
-  mod is disabled.
-- Previews are decoded with the Windows imaging components inside `explorer.exe`, on a low-priority
+  mod is disabled. It also replaces a Slideshow or Windows Spotlight background, and with **Only
+  change the current monitor** the wallpaper is saved for that monitor only.
+- The mod runs as a Windhawk tool mod, in its own `windhawk.exe` process, so a crash in it cannot
+  take down Explorer, the taskbar or the desktop.
+- Previews are decoded with the Windows imaging components in that process, on a low-priority
   background thread. Images above roughly 150 megapixels show "No preview" instead of being decoded.
 - Nothing runs in the background while the selector is closed, apart from the hotkey itself and, for
   a couple of seconds after you pick a wallpaper, the transition.
