@@ -123,13 +123,18 @@ log says so.
 
 See the [changelog](CHANGELOG.md) for what changed in each version.
 
-## Feedback and contributions
+## Contributing
 
-Found a bug or have an idea? Open an
-[issue](https://github.com/DavidRaveloU/Wallpaper-Changer-Windhawk/issues) with your Windows build, the
-mod version and the style you use. Pull requests are welcome: fork the
-[repository](https://github.com/DavidRaveloU/Wallpaper-Changer-Windhawk), branch from `main`, change
-`wallpaper-changer.wh.cpp` and describe what you tested.
+Bug reports, fixes, new features, translations and documentation corrections are welcome. Open an
+[issue](https://github.com/DavidRaveloU/Wallpaper-Changer-Windhawk/issues) with your Windows build,
+the mod version, the steps to reproduce it and, when it is visual, a screenshot or a short clip.
+
+For a pull request: fork, branch from `main`, change `wallpaper-changer.wh.cpp`, confirm it compiles
+and open the PR describing **what** changed and **why**. One bug or feature per PR is much easier to
+review.
+
+Leave `@version` in the mod header and `version.json` alone: the maintainer sets both when a release is
+published on Windhawk, so they always agree with what the store shows.
 
 ## License
 
